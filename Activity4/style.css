@@ -1,0 +1,118 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    background: url(bgg.png);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.title{
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    margin-bottom: 7px;
+    padding: 10px;
+    color: rgb(12, 22, 10);
+    text-transform: uppercase;
+    font-size: 45px;
+    text-align: center  ;
+    font-family: fantasy;
+}
+
+.open{
+
+}
+
+.container{
+    width: 55%;
+    height: 400px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+    border: 2px solid white;
+    box-shadow: 0 15px 100px rgb(2, 3, 17);
+    border-radius: 20px;
+}
+
+.right{
+    float: right;
+    width: 50%;
+    height: 400px;
+    background: url(oceann.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.left{
+    float: left;
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.formBox{
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    height: 400px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: black;
+}
+
+.AC{
+    font-size: 15px;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+input[type = "text"],
+input[type = "Password"]{
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    outline: none;
+    height: 30pxpx;
+}
+
+input[type = "text"]:focus,
+input[type = "Password"]:focus{
+    border-bottom: 2px solid #262626;
+}
+
+input[type = "email"]{
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    outline: none;
+    height: 20px;
+    color: rgb(12, 12, 12);
+}
+
+
+input[type = "submit"]{
+    border: 1px solid black;
+    outline: none;
+    height: 20px;
+    color: rgb(12, 12, 12);
+}
+
+input[type = "submit"]:hover{
+
+    background: rgb(58, 175, 12);
+}
+
+a{
+    color: #262626;
+    font-size: 12px;
+    font-weight: bold;
+}
