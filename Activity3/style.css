@@ -1,0 +1,86 @@
+.bg{
+    background: rgb(173, 147, 99);
+    padding: 0;
+    margin: 0;
+   
+}
+
+.orange{
+    background: rgb(248, 244, 244);
+    text-align: center ;
+    line-height: 4;
+    letter-spacing: 7px;
+    word-spacing: 20px;
+    font-family:fantasy;
+    font-weight: bold;
+    font-size:x-large;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boba{
+    width: 300px;
+    height: 350px;
+   
+}
+
+.Price{
+    font-family: fantasy;
+    font-size: 1em;
+    text-align: center;
+}
+
+hr{
+    margin: 5%;
+    border-top: 3   px solid rgb(255, 255, 255);  
+}
+h1{
+    font-family:fantasy;
+    text-align: center;
+}
+
+.mih{
+    font-family: fantasy;
+    font-size: 1em;
+}
+
+table,th,td{
+    width: 500px;
+    margin: auto;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+.hl{
+    text-align: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.fill{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+label{
+    text-align: center;
+}
+.Q{
+    text-align: center;
+}
+.file-upload{
+    display: inline-block;
+    padding: 0  20px;
+    height: 26px;
+    line-height: 26px;
+    color: white;
+    background-color: white;
+}
+.submit{
+    
+    height: 40px;
+    width: 100px;
+    text-align: center;
+}
