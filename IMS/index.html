@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Inventory Management System</h1>
+      <p>Organize stock, track orders, and respond faster.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="panel" aria-labelledby="inventory-panel">
+        <div class="panel-header">
+          <h2 id="inventory-panel">Products</h2>
+          <button id="add-product-btn" class="primary-btn">Add Product</button>
+        </div>
+        <table class="data-table" aria-live="polite">
+          <thead>
+            <tr>
+              <th scope="col">SKU</th>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Reorder Point</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body"></tbody>
+        </table>
+      </section>
+
+      <section class="panel" aria-labelledby="orders-panel">
+        <div class="panel-header">
+          <h2 id="orders-panel">Customer Orders</h2>
+          <button id="add-order-btn" class="primary-btn">Record Order</button>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Order #</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Product</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="order-table-body"></tbody>
+        </table>
+      </section>
+
+      <section class="panel" aria-labelledby="notifications-panel">
+        <div class="panel-header">
+          <h2 id="notifications-panel">Alerts & Settings</h2>
+        </div>
+        <div class="notification-controls">
+          <div class="notification-settings">
+            <label for="notification-duration"
+              >Notify about low stock every</label
+            >
+            <div class="duration-input">
+              <input
+                type="number"
+                id="notification-duration"
+                min="1"
+                value="3"
+                aria-label="Notification interval in days"
+              />
+              <span>days</span>
+            </div>
+            <button id="save-settings" class="secondary-btn">
+              Save Reminder Interval
+            </button>
+          </div>
+          <ul
+            id="notification-list"
+            class="notification-list"
+            aria-live="assertive"
+          ></ul>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="product-dialog" class="modal">
+      <form id="product-form" method="dialog">
+        <h3>Add Product</h3>
+        <label
+          >SKU
+          <input type="text" name="sku" required />
+        </label>
+        <label
+          >Name
+          <input type="text" name="name" required />
+        </label>
+        <label
+          >Category
+          <input type="text" name="category" />
+        </label>
+        <label
+          >Current Stock
+          <input type="number" name="stock" min="0" required />
+        </label>
+        <label
+          >Reorder Point
+          <input type="number" name="reorderPoint" min="0" required />
+        </label>
+        <menu class="dialog-actions">
+          <button value="cancel" class="secondary-btn">Cancel</button>
+          <button value="default" class="primary-btn">Save</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog id="order-dialog" class="modal">
+      <form id="order-form" method="dialog">
+        <h3>Record Customer Order</h3>
+        <label
+          >Order Number
+          <input type="text" name="orderNumber" required />
+        </label>
+        <label
+          >Customer Name
+          <input type="text" name="customer" required />
+        </label>
+        <label
+          >Product
+          <select name="product" required></select>
+        </label>
+        <label
+          >Quantity
+          <input type="number" name="quantity" min="1" required />
+        </label>
+        <label
+          >Status
+          <select name="status" required>
+            <option value="Reserved">Reserved</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+            <option value="Cancelled">Cancelled</option>
+          </select>
+        </label>
+        <menu class="dialog-actions">
+          <button value="cancel" class="secondary-btn">Cancel</button>
+          <button value="default" class="primary-btn">Save</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <template id="notification-item-template">
+      <li class="notification-item">
+        <span class="notification-text"></span>
+        <time class="notification-time"></time>
+      </li>
+    </template>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
